@@ -9,7 +9,8 @@ public class CreateAccountStepDefinitions {
 
     @Steps
     HomeSteps homeSteps;
-    SignUpFormSteps signInSteps;
+    @Steps
+    SignUpFormSteps signUpFormSteps;
 
     @Given("User is able to access blaze webstore")
     public void userIsAbleToAccessBlazeWebstore() {
@@ -22,12 +23,13 @@ public class CreateAccountStepDefinitions {
     }
     @When("The user fills the data for the new account")
     public void theUserFillsTheDataForTheNewAccount() {
-        signInSteps.inputUsername();
-        signInSteps.inputPassword();
-        signInSteps.clickFormSignUpButton();
+        signUpFormSteps.inputUsername();
+        signUpFormSteps.inputPassword();
+        signUpFormSteps.clickFormSignUpButton();
     }
     @Then("I should see a browser alert with a successful message")
     public void iShouldSeeABrowserAlertWithASuccessfulMessage() {
-
+    // insert assertions
+        signUpFormSteps.successfulAlert();
     }
 }

@@ -4,6 +4,8 @@ import com.demoblaze.pages.HomePage;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 
+import java.time.Duration;
+
 public class HomeSteps {
     @Page
     HomePage homePage;
@@ -16,4 +18,5 @@ public class HomeSteps {
     public void clickOnSignIn(){
         homePage.getDriver().findElement(homePage.getBtnSignIn()).click();
     }
+
 }
