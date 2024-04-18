@@ -4,6 +4,7 @@ import com.demoblaze.steps.HomeSteps;
 import com.demoblaze.steps.SignUpFormSteps;
 import io.cucumber.java.en.*;
 import net.thucydides.core.annotations.Steps;
+import io.cucumber.datatable.DataTable;
 
 public class CreateAccountStepDefinitions {
 
@@ -22,9 +23,9 @@ public class CreateAccountStepDefinitions {
         homeSteps.clickOnSignIn();
     }
     @When("The user fills the data for the new account")
-    public void theUserFillsTheDataForTheNewAccount() {
-        signUpFormSteps.inputUsername();
-        signUpFormSteps.inputPassword();
+    public void theUserFillsTheDataForTheNewAccount(DataTable dataTable) {
+        signUpFormSteps.inputUsername(dataTable);
+        signUpFormSteps.inputPassword(dataTable);
         signUpFormSteps.clickFormSignUpButton();
     }
     @Then("I should see a browser alert with a successful message")
