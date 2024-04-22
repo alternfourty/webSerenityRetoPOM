@@ -43,3 +43,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/src/test/resources/Data/dataFile2.xlsx
+/gradle/wrapper/gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties
