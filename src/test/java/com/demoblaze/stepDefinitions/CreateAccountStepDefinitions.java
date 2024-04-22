@@ -24,13 +24,12 @@ public class CreateAccountStepDefinitions {
     }
     @When("The user fills the data for the new account")
     public void theUserFillsTheDataForTheNewAccount(DataTable dataTable) {
-        signUpFormSteps.inputUsername(dataTable);
-        signUpFormSteps.inputPassword(dataTable);
+        signUpFormSteps.inputUsername();
+        signUpFormSteps.inputPassword();
         signUpFormSteps.clickFormSignUpButton();
     }
     @Then("I should see a browser alert with a successful message")
     public void iShouldSeeABrowserAlertWithASuccessfulMessage() {
-    // insert assertions
         signUpFormSteps.successfulAlert();
     }
 }

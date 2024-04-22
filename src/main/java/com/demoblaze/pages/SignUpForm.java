@@ -7,6 +7,7 @@ public class SignUpForm extends PageObject {
     private final By txtUsername = By.xpath("//input[@id='sign-username']");
     private final By txtPassword = By.xpath("//input[@id='sign-password']");
     private final By btnSignUpForm = By.xpath("//button[contains(@onclick,'register()')]");
+
     public By getTxtUsername() {
         return txtUsername;
     }
